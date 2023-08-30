@@ -1,0 +1,43 @@
+.form {
+  &--controller {
+    display: flex;
+    flex-direction: column;
+  }
+  &--item {
+    display: flex;
+    flex-direction: column;
+  }
+  &__input,
+  &__textarea {
+    border-radius: 8px;
+    outline: unset;
+    border: unset;
+    resize: unset;
+    padding: 1rem;
+    margin: 0.5rem;
+  }
+  &__label {
+    // color: #222;
+    font-size: 1.2rem;
+    @include tablet {
+      font-size: 1.5srem;
+    }
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+  &--btn {
+    outline: unset;
+    border: unset;
+    background-color: $red--light;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all ease 0.5s;
+    &:hover {
+      box-shadow: 0 0 2px 1px $red--light;
+      background-color: rgba($red--light, 0.8);
+    }
+  }
+}

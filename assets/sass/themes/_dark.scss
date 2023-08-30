@@ -1,0 +1,65 @@
+.darkmode {
+  position: absolute;
+  top: 3rem;
+  right: 4rem;
+  background-color: #F6D7FA;
+  border: unset;
+  outline: none;
+  padding: 1rem;
+  border-radius: 6px;
+  transition: all ease 0.5s;
+  cursor: pointer;
+  &:hover {
+    color: $red--light;
+    transform: scale(1.3);
+    background-color: transparent;
+  }
+}
+.dark.home__glass{
+  background-color: #212529;
+  color: #fff !important;
+  background-image: unset;
+}
+.dark .home__content--item__blog--header__link
+{
+  color: #fff;
+}
+.dark .resume--graph--item__line{
+  color: #fff;
+}
+.dark .resume--item--progress__item>label{
+  color: #fff;
+}
+.dark .bio--item__about-me__bio--information--item > p:nth-child(1){
+  color: #fff;
+}
+.dark .fa-dot-circle{
+  color: #fff;
+}
+.dark.home__sidebar{
+  background-color: #212529;
+  background-image: unset;
+
+}
+.dark .resume--item__child--info{
+  &>p{
+  color: #fff !important;
+
+  }
+
+}
+.dark .resume--item__child{
+  background-color: #212529;
+  background-image: unset;
+  box-shadow: 0 0 3px 2px #000;
+  &>p{
+    &>span{
+      color: #fff;
+    }
+  }
+}
+
+.dark.home__sidebar--item{
+  background-color: #212529;
+
+}

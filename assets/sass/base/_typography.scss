@@ -1,0 +1,106 @@
+/* 
+text--primary
+heading--primary
+text--secondary
+ */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&display=swap');
+.text {
+  &--primary {
+    color: $red--light;
+    font-size: 2.9rem;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  &--secondary {
+    font-size: 3.2rem;
+    width: 100%;
+    display: flex;
+    & > .typing {
+      color: $red--light;
+      font-weight: 700;
+      margin-left: 1rem;
+    }
+  }
+}
+
+.heading {
+  &--primary {
+
+    font-size: 4.8rem;
+    text-transform: uppercase;
+  }
+  &--secondary {
+    font-size: 3rem;
+    font-weight: 700;
+
+    & > span {
+      color: $red--light;
+    }
+  }
+  &--trinary {
+    font-size: 2.5rem;
+    color: $red--light;
+    // text-align: left;
+    align-self: flex-start;
+  }
+  &--fourth {
+    font-size: 1.9rem;
+    color: $red--light;
+    font-weight: 700;
+  }
+  &--line {
+    position: relative;
+    &::after {
+      content: ' ';
+      position: absolute;
+      bottom: 45%;
+      width: 50%;
+      height: 0.2rem;
+      background-color: $red--light;
+    }
+  }
+  &--line--100 {
+    position: relative;
+    &::after {
+      content: ' ';
+      position: absolute;
+      bottom: 45%;
+      width: 90%;
+      height: 0.2rem;
+      background-color: $red--light;
+    }
+  }
+}
+$text-length: 16;
+$animation-time: 8s;
+/* .typing {
+  position: relative;
+//   animation: isTyping $animation-time steps($text-length) forwards infinite;
+  &::after {
+    content: '|';
+    position: absolute;
+    right: 0;
+    width: 100%;
+    color: $red--light;
+    background-color: rgba(#fff, 0.8);
+    animation: typing $animation-time steps($text-length) forwards infinite,
+      caret 1s infinite;
+  }
+}
+// Animation
+@keyframes typing {
+  0% {
+    width: 100%;
+  }
+  50% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes caret {
+  50% {
+    color: transparent;
+  }
+} */

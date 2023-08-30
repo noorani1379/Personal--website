@@ -1,0 +1,55 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+  @include tablet {
+    font-size: 50%;
+  }
+}
+body {
+  background-image: url('../images/Gradient.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Comfortaa', cursive;
+  position: relative;
+  color: $red--light;
+}
+.container {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  @include phone {
+    place-items: unset;
+  }
+  @include tablet {
+    min-height: 120vh;
+  }
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.scroll {
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+.scroll--blog {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 85%;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

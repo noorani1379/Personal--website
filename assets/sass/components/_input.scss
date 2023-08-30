@@ -1,0 +1,24 @@
+.input--search {
+  &__box {
+    position: relative;
+    background-image: linear-gradient(
+      to left bottom,
+      rgba(#fff, 0.3),
+      rgba(#fff, 0)
+    );
+    box-shadow: 0 0 3px 2px transparent;
+    border-radius: 2rem;
+    & > label {
+      // color: #333; 
+      position: absolute;
+      top: 30%;
+      left: 5%;
+      font-weight: 700;
+    }
+  }
+  // input
+  border: unset;
+  outline: unset;
+  background-color: transparent;
+  padding: 1rem 2.5rem;
+}

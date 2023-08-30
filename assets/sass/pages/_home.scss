@@ -1,0 +1,269 @@
+.home {
+  &__glass {
+    background-image: linear-gradient(
+      to left bottom,
+      rgba(#fff, 0.3),
+      rgba(#fff, 0)
+    );
+    color: #222;
+
+    box-shadow: 0 0 3px 2px #777;
+    width: 75%;
+    height: 55rem;
+    position: relative;
+    @include phone {
+      width: 100%;
+      height: 92%;
+      position: static;
+      border-radius: 0;
+    }
+    @include tablet {
+      height: 100%;
+    }
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+  }
+  &__sidebar {
+    width: 8%;
+    height: 90%;
+    background-image: linear-gradient(
+      to left bottom,
+      rgba(#fff, 0.3),
+      rgba(#fff, 0)
+    );
+    box-shadow: 0 0 5px 2px #888;
+    transform: translateX(-5rem);
+    @include tablet {
+      transform: translateX(-3rem);
+      width: 10%;
+      display: grid;
+      place-items: center;
+    }
+    @include phone {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      transform: translateX(0);
+      width: 100%;
+      height: 8%;
+      display: grid;
+      place-items: center;
+      border-radius: 4px 4px 0 0;
+      background-image: linear-gradient(
+        to left bottom,
+        rgba(#fff, 0.3),
+        rgba(#fff, 0.5)
+      );
+    }
+    border-radius: 8px;
+
+    &--box {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      height: 90%;
+      @include phone {
+        width: 150%;
+        flex-direction: row;
+      }
+      @include tablet {
+        height: 100%;
+      }
+
+      &--setting {
+        height: 100%;
+        display: grid;
+        place-items: center;
+
+        @include tablet {
+          height: 70%;
+          justify-content: space-around;
+        }
+      }
+    }
+    &--item {
+      font-size: 2.2rem;
+      padding: 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      background-color: #e0e6fb;
+      color: $red--light;
+      transition: background-color ease-in-out 0.5s;
+      &:hover {
+        background-color: $red--light;
+        box-shadow: 0 0 8px 2px $red--light;
+        &>i{
+        color: #e0e6fb;
+
+        }
+      }
+    }
+  }
+
+  /* 
+  home
+  */
+  &__content {
+    width: 90%;
+    height: 90%;
+    @include phone {
+      height: 100%;
+    }
+    &--box {
+      display: grid;
+      place-items: center;
+    }
+    &--item {
+      &__home {
+        display: flex;
+        @include tablet {
+          flex-direction: column;
+        }
+        align-items: center;
+        margin-top: 5rem;
+        justify-content: space-around;
+        width: 80%;
+        @include phone {
+          width: 100%;
+        }
+
+        &--information {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          &__detail {
+            @include phone {
+              & > heading--primary {
+                text-align: center;
+              }
+              & > text--primary,
+              & > text--secondary {
+                text-align: right !important;
+              }
+            }
+          }
+          &__links {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 80%;
+            margin-top: 2rem;
+            &--item {
+              display: flex;
+              align-items: center;
+              border-radius: 20rem;
+              font-size: 1.5rem;
+              font-weight: 700;
+              padding: 1rem 1.5rem;
+
+              &__cv {
+                background-color: $red--light;
+                color: #fff;
+                transition: all ease 0.5s;
+                &:hover {
+                  box-shadow: 0 0 1rem 3px $red--light;
+                }
+              }
+              &__hire {
+                background-color: #f6d7fa;
+                color: #333;
+                transition: all ease 0.5s;
+
+                &:hover {
+                  box-shadow: 0 0 1rem 3px #f6d7fa;
+                }
+              }
+            }
+          }
+          &__icons {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin-top: 4rem;
+            &--item {
+              font-size: 2.3rem;
+              // background-color: #e0e6fb;
+              padding: 1rem;
+              border-radius: 4px;
+              cursor: pointer;
+              position: relative;
+              transition: all ease 0.5s;
+              &:hover {
+                box-shadow: 0 0 1rem 2px currentColor;
+              }
+              & > .fa-whatsapp {
+                color: #fff;
+                background-color: #25d366;
+                padding: 1rem;
+                border-radius: 4px;
+              }
+              & > .fa-instagram {
+                color: #fff;
+                background-color: #e1306c;
+                padding: 1rem;
+                border-radius: 4px;
+              }
+              & > .fa-twitter {
+                color: #fff;
+                background-color: #1da1f2;
+                padding: 1rem;
+                border-radius: 4px;
+              }
+              & > .fa-linkedin-in {
+                color: #fff;
+                background-color: #34b7f1;
+                padding: 1rem;
+                border-radius: 4px;
+              }
+            }
+          }
+        }
+      }
+      &__img {
+        width: 90%;
+        height: 90%;
+        border-radius: 50%;
+        border: 1rem solid #f6d7fa;
+        &--box {
+          display: grid;
+          place-items: center;
+          width: 20rem;
+          height: 20rem;
+          border-radius: 50%;
+          border: 1rem solid $red--light;
+          &:hover > img {
+            filter: blur(89%);
+            transform: scale(0.98);
+          }
+        }
+      }
+    }
+  }
+}
+.active.home__sidebar--item {
+  background-color: $red--light;
+  color: #e0e6fb;
+  box-shadow: 0 0 8px 2px $red--light;
+}
+.home__content--item {
+  display: none;
+  width: 100%;
+  height: 100%;
+  @include phone {
+    height: 85%;
+  }
+}
+.home__content--box {
+  height: 100%;
+}
+.active {
+  display: flex;
+}
+
+.home__content--item__home {
+  @include phone {
+    height: 58% !important;
+  }
+}

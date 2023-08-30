@@ -1,0 +1,56 @@
+.article {
+  border-radius: 2rem;
+
+  width: 28rem;
+  @include phone {
+    width: 24rem;
+  }
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(
+    to left bottom,
+    rgba(#fff, 0.3),
+    rgba(#fff, 0)
+  );
+
+  &__heading {
+    margin-top: 2rem;
+    &--box {
+      padding: 1rem;
+    }
+  }
+  &__img {
+    border-radius: 2rem 2rem 0 0;
+    width: 100%;
+    height: 20rem;
+  }
+  &__heading {
+    color: $red--light;
+    text-transform: capitalize;
+  }
+
+  &__information {
+    &--box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+    &--item {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      width: 100%;
+      margin-top: 1rem;
+      & > p {
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+      & > p:nth-child(1) {
+        // color: #222;
+      }
+    }
+  }
+}

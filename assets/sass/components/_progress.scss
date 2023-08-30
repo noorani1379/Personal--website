@@ -1,0 +1,36 @@
+.resume--item--progress {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  &__item {
+      margin-top: 1rem;
+      width: 100%;
+    display: flex;
+    flex-direction: column;
+    &>label{
+        color: #111;
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+    &--self {
+      width: 100%;
+      padding: 1rem;
+      //   background-color: $red--light;
+    }
+  }
+}
+progress {
+  border-radius: 7px;
+  width: 100%;
+  height: 22px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+progress::-webkit-progress-bar {
+  //   background-color: ;
+  border-radius: 7px;
+}
+progress::-webkit-progress-value {
+  background-color: $red--light;
+  border-radius: 7px;
+//   box-shadow: 0 0 2px 1px $red--light;
+}

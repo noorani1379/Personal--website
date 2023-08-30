@@ -1,0 +1,61 @@
+.us {
+  &--page {
+    flex-direction: column;
+  }
+  &--box {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: row;
+    @include tablet {
+      flex-direction: column;
+    }
+    width: 95%;
+    align-items: center;
+    justify-content: space-between;
+    &__secondary {
+      display: flex;
+      width: 50%;
+      justify-content: space-between;
+      @include tablet {
+        width: 80%;
+        margin-top: 1rem;
+      }
+
+      &--one {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        align-items: baseline;
+      }
+      &--two {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        align-items: baseline;
+        
+      }
+    }
+    &__icons {
+      &--item {
+        display: flex;
+        align-items: baseline;
+        // color: #111;
+        font-size: 1.9rem;
+        margin-top: 3rem;
+        @include tablet {
+          margin-top: 1.5rem;
+          font-size: 1.7rem;
+        }
+        & > i {
+          background-color: #f6d7fa;
+          display: grid;
+          place-items: center;
+          padding: 1rem;
+          border-radius: 50%;
+          cursor: pointer;
+          margin-right: 0.5rem;
+        }
+      }
+    }
+  }
+}
